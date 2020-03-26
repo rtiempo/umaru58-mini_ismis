@@ -1,0 +1,68 @@
+
+.loginForm {    
+    width: 500px;
+    height: 400px;
+    background-color: #fff;
+    padding: 50px;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+}
+
+.loginForm input, .registerForm input, .subForm input, .schedForm input,
+.classForm input {
+    background-color: #fff;
+    border-bottom: solid 2px;
+}
+
+.loginForm h1, .loginForm small, .registerForm h1, .registerForm small,
+.subForm h1, .schedForm h1, .classForm h1 {
+    text-align: center;
+}
+
+.loginForm button, .registerForm button, .subForm button, .schedForm button,
+.classForm button {
+    width: 400px;
+}
+
+.registerForm {
+    width: 500px;
+    height: 700px;
+    background-color: #fff;
+    padding: 50px;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+}
+
+.registerForm select, .subForm select, .schedForm select, .classForm select {
+    background-color: #fff;
+    border-bottom: solid 2px;
+}
+
+.subForm {
+    width: 500px;
+    height: 400px;
+    background-color: #fff;
+    padding: 50px;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+}
+
+.schedForm {
+    width: 500px;
+    height: 700px;
+    background-color: #fff;
+    padding: 50px;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+}
+
+.classForm {
+    width: 500px;
+    height: 800px;
+    background-color: #fff;
+    padding: 50px;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+}

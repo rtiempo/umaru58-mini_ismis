@@ -1,0 +1,11 @@
+.linkBtn {
+    background: none;
+    border: none;
+    padding: 0;   
+    color: #111;
+    cursor: pointer;
+}
+
+.linkBtn:hover {
+    text-decoration: underline;
+}
