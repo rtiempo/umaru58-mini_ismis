@@ -16,7 +16,6 @@ if (!$conn) {
 if(isset($_POST['subAdd'])){
     $subName = $_POST['subName'];
     $maxStud = $_POST['maxStud'];
-    $facultyId = $_POST['facultyId'];
 
     $sql ="SELECT * FROM subject WHERE subName='$subName'";
     $result = mysqli_query($conn, $sql);
@@ -26,8 +25,8 @@ if(isset($_POST['subAdd'])){
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             Subject already exists!</div>';
     } else {        
-        $sql = "INSERT INTO subject (subName, maxStud, facultyId) 
-        VALUES ('$subName', '$maxStud', '$facultyId')";
+        $sql = "INSERT INTO subject (subName, maxStud) 
+        VALUES ('$subName', '$maxStud')";
 
         if ($conn->query($sql) === TRUE) {
             header("Location: ../../views/admin/admin.php");
@@ -52,14 +51,7 @@ if(isset($_POST['subUpdate'])){
         if ($conn->query($sql) === FALSE) {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
-    }
-    if(!empty($_POST['facultyId'])){
-        $facultyId = $_POST['facultyId'];
-        $sql = "UPDATE SUBJECT SET facultyId='$facultyId' WHERE subjectId='$id'";
-        if ($conn->query($sql) === FALSE) {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-    }
+    }   
 
     header("Location: ../../views/admin/admin.php");
 }
