@@ -21,9 +21,9 @@ if(isset($_POST['login'])){
         $secPass = hash('sha512', $pass);
 
         $sql = "SELECT * FROM users WHERE email='$email' AND pass='$secPass'";
-        $retval = mysqli_query( $conn, $sql );
-    
-        if(! $retval){
+        $retval = mysqli_query($conn, $sql);
+
+        if($retval->num_rows == 0){
             echo'<div class="alert alert-dismissible alert-danger">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             Incorrect email or password!</div>';
